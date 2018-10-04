@@ -21,6 +21,9 @@ $foobar = new Foobar();
 $typedList->add($foobar);
 $typedList->remove($foobar);
 
+$otherType = new OtherType();
+$typedList->add($otherType); // will throw InvalidTypeException
+
 $integerList = new IntegerList();
 $integerList->add(1);
 $integerList->add('not a number'); // will throw InvalidTypeException
