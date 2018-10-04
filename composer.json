@@ -1,0 +1,21 @@
+{
+    "name": "vehsamrak/phplist",
+    "description": "List structure PHP implementation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petr Karmashev",
+            "email": "smonkl@bk.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "doctrine/collections": "1.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vehsamrak\\List\\": "src/"
+        }
+    }
+}
