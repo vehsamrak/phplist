@@ -27,5 +27,6 @@ $integerList = new IntegerList();
 $integerList->add(1);
 $integerList->add('not a number'); // will throw InvalidTypeException
 
-// more usecases can be found in Doctrine collections documentation: https://www.doctrine-project.org/projects/doctrine-collections/en/latest/index.html
+// more usecases can be found in Doctrine collections documentation:
+// https://www.doctrine-project.org/projects/doctrine-collections/en/latest/index.html
 ```
