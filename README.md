@@ -15,7 +15,6 @@ composer require vehsamrak/php-list
 use Vehsamrak\ListCollection\TypedList;
 use Vehsamrak\ListCollection\IntegerList;
 
-
 $typedList = new TypedList(Foobar::class, [new Foobar(), new Foobar()]);
 
 $foobar = new Foobar();
