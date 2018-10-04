@@ -1,5 +1,16 @@
 # List implementation for PHP
 List structure PHP implementation based on Doctrine collections.
+Supported lists:
+* TypedList (by class name)
+* IntegerList
+* StringList
+* BooleanList
+* FloatList
+* FunctionList
+* CollectionList
+* ArrayList
+* ObjectList
+* ResourceList
 
 ### Installation
 ```
