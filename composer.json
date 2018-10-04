@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Vehsamrak\\List\\": "src/"
+            "Vehsamrak\\ListCollection\\": "src/"
         }
     }
 }
