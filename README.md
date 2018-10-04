@@ -30,3 +30,20 @@ $integerList->add('not a number'); // will throw InvalidTypeException
 // more usecases can be found in Doctrine collections documentation:
 // https://www.doctrine-project.org/projects/doctrine-collections/en/latest/index.html
 ```
+
+### Creation of custom typed lists
+
+You can create your own typed lists simply by extending TypedList.
+
+```php
+<?php
+use Vehsamrak\ListCollection\TypedList;
+
+class CustomList extends TypedList
+{
+    public function __construct(array $elements = [])
+    {
+        parent::__construct(Custom::class, $elements);
+    }
+}
+```
