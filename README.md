@@ -2,7 +2,6 @@
 List structure PHP implementation based on Doctrine collections.
 
 ### Installation
-Install the latest version with
 ```
 composer require vehsamrak/php-list
 ```
