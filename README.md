@@ -3,7 +3,7 @@ List structure PHP implementation based on Doctrine collections.
 
 ### Installation
 ```
-composer require vehsamrak/php-list
+composer require vehsamrak/phplist
 ```
 
 ### Usage
