@@ -15,7 +15,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Vehsamrak\\ListCollection\\": "src/"
+            "Vehsamrak\\ListCollection\\": "src/",
+            "Test\\Vehsamrak\\ListCollection\\": "tests/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7.4.*"
     }
 }
