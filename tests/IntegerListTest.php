@@ -9,7 +9,7 @@ class IntegerListTest extends TestCase
 {
     /**
      * @test
-     * @dataProvider getValidConstructorParameters
+     * @dataProvider getValidParameters
      */
     public function construct_validConstructorParameters_newIntegerListCreatedWithNoExceptions(array $parameters): void
     {
@@ -27,7 +27,7 @@ class IntegerListTest extends TestCase
 
     /**
      * @test
-     * @dataProvider getInvalidConstructorParameters
+     * @dataProvider getInvalidParameters
      */
     public function construct_invalidConstructorParameters_invalidTypeExceptionThrowed(array $parameters): void
     {
@@ -43,7 +43,84 @@ class IntegerListTest extends TestCase
         $this->assertInstanceOf(InvalidTypeException::class, $exception);
     }
 
-    public function getValidConstructorParameters()
+    /**
+     * @test
+     * @dataProvider getValidParameters
+     */
+    public function add_validParameters_noExceptions(array $parameters): void
+    {
+        $integerList = new IntegerList();
+        $exception = null;
+
+        try {
+            foreach ($parameters as $parameter) {
+                $integerList->add($parameter);
+            }
+        } catch (\Exception $exception) {
+        }
+
+        $this->assertNull($exception);
+    }
+
+    /**
+     * @test
+     * @dataProvider getInvalidParameters
+     */
+    public function add_invalidParameters_noExceptions(array $parameters): void
+    {
+        $integerList = new IntegerList();
+        $exception = null;
+
+        try {
+            foreach ($parameters as $parameter) {
+                $integerList->add($parameter);
+            }
+        } catch (\Exception $exception) {
+        }
+
+        $this->assertInstanceOf(InvalidTypeException::class, $exception);
+    }
+
+    /**
+     * @test
+     * @dataProvider getValidParameters
+     */
+    public function set_validParameters_noExceptions(array $parameters): void
+    {
+        $integerList = new IntegerList();
+        $exception = null;
+
+        try {
+            foreach ($parameters as $parameter) {
+                $integerList->set(0, $parameter);
+            }
+        } catch (\Exception $exception) {
+        }
+
+        $this->assertInstanceOf(IntegerList::class, $integerList);
+        $this->assertNull($exception);
+    }
+
+    /**
+     * @test
+     * @dataProvider getInvalidParameters
+     */
+    public function set_invalidParameters_noExceptions(array $parameters): void
+    {
+        $integerList = new IntegerList();
+        $exception = null;
+
+        try {
+            foreach ($parameters as $parameter) {
+                $integerList->set(0, $parameter);
+            }
+        } catch (\Exception $exception) {
+        }
+
+        $this->assertInstanceOf(InvalidTypeException::class, $exception);
+    }
+
+    public function getValidParameters()
     {
         return [
             [[]],
@@ -53,7 +130,7 @@ class IntegerListTest extends TestCase
         ];
     }
 
-    public function getInvalidConstructorParameters()
+    public function getInvalidParameters()
     {
         return [
             [[1.1]],
