@@ -1,22 +1,20 @@
 <?php
 namespace Test\Vehsamrak\ListCollection;
 
-use Vehsamrak\ListCollection\IntegerList;
+use Vehsamrak\ListCollection\ResourceList;
 
-class IntegerListTest extends AbstractListTest
+class ResourceListTest extends AbstractListTest
 {
-    protected function getListClassName(): string
-    {
-        return IntegerList::class;
+    protected function getListClassName(): string {
+        return ResourceList::class;
     }
 
     public function getValidParameters()
     {
         return [
             [[]],
-            [[1]],
-            [[1,2]],
-            [[1,2,3]],
+            [[opendir(__DIR__)]],
+            [[opendir(__DIR__), opendir(__DIR__)]],
         ];
     }
 
@@ -24,7 +22,7 @@ class IntegerListTest extends AbstractListTest
     {
         return [
             [[1.1]],
-            [['string']],
+            [[1]],
             [[1, 'string']],
             [[new self()]],
             [[true]],

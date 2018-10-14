@@ -1,22 +1,23 @@
 <?php
 namespace Test\Vehsamrak\ListCollection;
 
-use Vehsamrak\ListCollection\IntegerList;
+use Vehsamrak\ListCollection\FunctionList;
 
-class IntegerListTest extends AbstractListTest
+class FunctionListTest extends AbstractListTest
 {
     protected function getListClassName(): string
     {
-        return IntegerList::class;
+        return FunctionList::class;
     }
 
     public function getValidParameters()
     {
+        $function = function () {};
+
         return [
             [[]],
-            [[1]],
-            [[1,2]],
-            [[1,2,3]],
+            [[$function]],
+            [[$function, $function]],
         ];
     }
 
@@ -24,10 +25,10 @@ class IntegerListTest extends AbstractListTest
     {
         return [
             [[1.1]],
-            [['string']],
-            [[1, 'string']],
-            [[new self()]],
+            [[1]],
             [[true]],
+            [['string']],
+            [[new self()]],
         ];
     }
 }

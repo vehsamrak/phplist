@@ -1,32 +1,31 @@
 <?php
 namespace Test\Vehsamrak\ListCollection;
 
-use Vehsamrak\ListCollection\IntegerList;
+use Vehsamrak\ListCollection\ObjectList;
 
-class IntegerListTest extends AbstractListTest
+class ObjectListTest extends AbstractListTest
 {
     protected function getListClassName(): string
     {
-        return IntegerList::class;
+        return ObjectList::class;
     }
 
     public function getValidParameters()
     {
         return [
             [[]],
-            [[1]],
-            [[1,2]],
-            [[1,2,3]],
+            [[new self()]],
+            [[new self(), new self()]],
         ];
     }
 
     public function getInvalidParameters()
     {
         return [
-            [[1.1]],
             [['string']],
+            [[1]],
+            [[1.1]],
             [[1, 'string']],
-            [[new self()]],
             [[true]],
         ];
     }

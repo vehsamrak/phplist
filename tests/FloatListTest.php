@@ -1,30 +1,29 @@
 <?php
 namespace Test\Vehsamrak\ListCollection;
 
-use Vehsamrak\ListCollection\IntegerList;
+use Vehsamrak\ListCollection\FloatList;
 
-class IntegerListTest extends AbstractListTest
+class FloatListTest extends AbstractListTest
 {
     protected function getListClassName(): string
     {
-        return IntegerList::class;
+        return FloatList::class;
     }
 
     public function getValidParameters()
     {
         return [
             [[]],
-            [[1]],
-            [[1,2]],
-            [[1,2,3]],
+            [[1.1]],
+            [[1.1, 2.2]],
         ];
     }
 
     public function getInvalidParameters()
     {
         return [
-            [[1.1]],
             [['string']],
+            [[1]],
             [[1, 'string']],
             [[new self()]],
             [[true]],

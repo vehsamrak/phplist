@@ -1,22 +1,21 @@
 <?php
 namespace Test\Vehsamrak\ListCollection;
 
-use Vehsamrak\ListCollection\IntegerList;
+use Vehsamrak\ListCollection\BooleanList;
 
-class IntegerListTest extends AbstractListTest
+class BooleanListTest extends AbstractListTest
 {
     protected function getListClassName(): string
     {
-        return IntegerList::class;
+        return BooleanList::class;
     }
 
     public function getValidParameters()
     {
         return [
             [[]],
-            [[1]],
-            [[1,2]],
-            [[1,2,3]],
+            [[true]],
+            [[true,false]],
         ];
     }
 
@@ -24,10 +23,10 @@ class IntegerListTest extends AbstractListTest
     {
         return [
             [[1.1]],
+            [[1]],
             [['string']],
             [[1, 'string']],
             [[new self()]],
-            [[true]],
         ];
     }
 }
