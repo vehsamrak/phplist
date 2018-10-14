@@ -38,7 +38,9 @@ $integerList = new IntegerList();
 $integerList->add(1);
 $integerList->add('not a number'); // will throw InvalidTypeException
 
-// more usecases can be found in Doctrine collections documentation:
+// Examples could be found in `tests` directory
+
+// More use cases can be found in Doctrine collections documentation:
 // https://www.doctrine-project.org/projects/doctrine-collections/en/latest/index.html
 ```
 
@@ -58,3 +60,6 @@ class CustomList extends TypedList
     }
 }
 ```
+
+### Testing
+First, install development requirements with `composer install`. Then, tests could be executed with `vendor/bin/phpunit tests`
