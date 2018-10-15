@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUnitUndefinedDataProviderInspection */
 namespace Test\Vehsamrak\ListCollection;
 
 use PHPUnit\Framework\TestCase;
@@ -13,9 +14,6 @@ abstract class AbstractListTest extends TestCase
      */
     public function construct_validConstructorParameters_newListCreatedWithNoExceptions(array $parameters): void
     {
-        $integerList = null;
-        $exception = null;
-
         try {
             $integerList = $this->createList($parameters);
         } catch (\Exception $exception) {
@@ -31,9 +29,6 @@ abstract class AbstractListTest extends TestCase
      */
     public function construct_invalidConstructorParameters_invalidTypeExceptionThrowed(array $parameters): void
     {
-        $integerList = null;
-        $exception = null;
-
         try {
             $integerList = $this->createList($parameters);
         } catch (\Exception $exception) {
@@ -50,7 +45,6 @@ abstract class AbstractListTest extends TestCase
     public function add_validParameters_noExceptions(array $parameters): void
     {
         $integerList = $this->createList();
-        $exception = null;
 
         try {
             foreach ($parameters as $parameter) {
@@ -69,7 +63,6 @@ abstract class AbstractListTest extends TestCase
     public function add_invalidParameters_noExceptions(array $parameters): void
     {
         $integerList = $this->createList();
-        $exception = null;
 
         try {
             foreach ($parameters as $parameter) {
@@ -88,7 +81,6 @@ abstract class AbstractListTest extends TestCase
     public function set_validParameters_noExceptions(array $parameters): void
     {
         $integerList = $this->createList();
-        $exception = null;
 
         try {
             foreach ($parameters as $parameter) {
@@ -108,7 +100,6 @@ abstract class AbstractListTest extends TestCase
     public function set_invalidParameters_noExceptions(array $parameters): void
     {
         $integerList = $this->createList();
-        $exception = null;
 
         try {
             foreach ($parameters as $parameter) {
