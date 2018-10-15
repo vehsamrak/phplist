@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUnitUndefinedDataProviderInspection */
 namespace Test\Vehsamrak\ListCollection;
 
 use PHPUnit\Framework\TestCase;
