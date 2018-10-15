@@ -4,11 +4,7 @@ build:
       version: 7.1.0
   tests:
     override:
-    -
-      command: vendor/bin/phpunit --coverage-clover=coverage.xml
-      coverage:
-        file: coverage.xml
-        format: php-clover
+    - php-scrutinizer-run
 checks:
   php:
     code_rating: true

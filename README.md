@@ -1,4 +1,7 @@
 # List implementation for PHP
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Vehsamrak/phplist/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Vehsamrak/phplist/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/Vehsamrak/phplist/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Vehsamrak/phplist/?branch=master)
+
 List structure PHP implementation based on Doctrine collections.
 Supported lists:
 * TypedList (by class name)
