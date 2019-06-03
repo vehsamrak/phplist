@@ -1,4 +1,4 @@
-# List implementation for PHP
+# Typed list implementation for PHP
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Vehsamrak/phplist/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Vehsamrak/phplist/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/Vehsamrak/phplist/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Vehsamrak/phplist/?branch=master)
 
